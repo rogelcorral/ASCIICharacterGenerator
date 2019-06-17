@@ -5,11 +5,11 @@
 
 
 Public Class MainForm
-    Private Sub tbExit_Click(sender As Object, e As EventArgs) Handles tbExit.Click
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Application.Exit()
     End Sub
 
-    Private Sub tbGenerate_Click(sender As Object, e As EventArgs) Handles tbGenerate.Click
+    Private Sub btnGenerate_Click(sender As Object, e As EventArgs) Handles btnGenerate.Click
 
         'Dim myASCII As Char
         Dim userInput As Integer
@@ -19,7 +19,20 @@ Public Class MainForm
                                 MessageBoxButtons.OK)
             UnitsInputSelect()
         ElseIf Integer.TryParse(tbInput.Text, userInput) Then
-            lbOutputASCII.Text = ChrW(userInput)
+            If (userInput >= 0 And userInput <= 255) Then
+                Dim enc As System.Text.Encoding
+                enc = System.Text.Encoding.GetEncoding("CP437")
+
+                Dim bytes = Enumerable.Range(0, 256).Select(Function(b) CByte(b)).ToArray
+                Dim chars() = enc.GetChars(bytes)
+
+                lbOutputASCII.Text = chars(userInput)
+                btnReset.Select()
+            Else
+                MessageBox.Show("Please enter whole numbers only between 0 and 255.", "",
+                                MessageBoxButtons.OK)
+                UnitsInputSelect()
+            End If
         Else
             MessageBox.Show("Please enter whole numbers only.", "",
                                 MessageBoxButtons.OK)
@@ -31,5 +44,12 @@ Public Class MainForm
         tbInput.Select()
         tbInput.SelectionStart = 0
         tbInput.SelectionLength = tbInput.Text.Length
+    End Sub
+
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        tbInput.Clear()
+        lbOutputASCII.Text = ""
+        btnGenerate.Select()
+        tbInput.Focus()
     End Sub
 End Class

@@ -26,9 +26,9 @@ Partial Class MainForm
         Me.tbInput = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbOutputASCII = New System.Windows.Forms.Label()
-        Me.tbGenerate = New System.Windows.Forms.Button()
-        Me.tbReset = New System.Windows.Forms.Button()
-        Me.tbExit = New System.Windows.Forms.Button()
+        Me.btnGenerate = New System.Windows.Forms.Button()
+        Me.btnReset = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lbInput
@@ -69,51 +69,55 @@ Partial Class MainForm
         Me.lbOutputASCII.TabIndex = 3
         Me.lbOutputASCII.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'tbGenerate
+        'btnGenerate
         '
-        Me.tbGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.tbGenerate.Location = New System.Drawing.Point(205, 12)
-        Me.tbGenerate.Name = "tbGenerate"
-        Me.tbGenerate.Size = New System.Drawing.Size(75, 75)
-        Me.tbGenerate.TabIndex = 4
-        Me.tbGenerate.Text = "Generate"
-        Me.tbGenerate.UseVisualStyleBackColor = True
+        Me.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnGenerate.Location = New System.Drawing.Point(205, 12)
+        Me.btnGenerate.Name = "btnGenerate"
+        Me.btnGenerate.Size = New System.Drawing.Size(75, 75)
+        Me.btnGenerate.TabIndex = 4
+        Me.btnGenerate.Text = "Generate"
+        Me.btnGenerate.UseVisualStyleBackColor = True
         '
-        'tbReset
+        'btnReset
         '
-        Me.tbReset.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.tbReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.tbReset.Location = New System.Drawing.Point(205, 81)
-        Me.tbReset.Name = "tbReset"
-        Me.tbReset.Size = New System.Drawing.Size(75, 75)
-        Me.tbReset.TabIndex = 5
-        Me.tbReset.Text = "Reset"
-        Me.tbReset.UseVisualStyleBackColor = True
+        Me.btnReset.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnReset.Location = New System.Drawing.Point(205, 81)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(75, 75)
+        Me.btnReset.TabIndex = 5
+        Me.btnReset.Text = "Reset"
+        Me.btnReset.UseVisualStyleBackColor = True
         '
-        'tbExit
+        'btnExit
         '
-        Me.tbExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.tbExit.Location = New System.Drawing.Point(205, 149)
-        Me.tbExit.Name = "tbExit"
-        Me.tbExit.Size = New System.Drawing.Size(75, 75)
-        Me.tbExit.TabIndex = 6
-        Me.tbExit.Text = "Exit"
-        Me.tbExit.UseVisualStyleBackColor = True
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnExit.Location = New System.Drawing.Point(205, 149)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(75, 75)
+        Me.btnExit.TabIndex = 6
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
         '
         'MainForm
         '
-        Me.AcceptButton = Me.tbGenerate
+        Me.AcceptButton = Me.btnGenerate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.CancelButton = Me.tbReset
+        Me.CancelButton = Me.btnReset
         Me.ClientSize = New System.Drawing.Size(294, 236)
-        Me.Controls.Add(Me.tbExit)
-        Me.Controls.Add(Me.tbReset)
-        Me.Controls.Add(Me.tbGenerate)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnReset)
+        Me.Controls.Add(Me.btnGenerate)
         Me.Controls.Add(Me.lbOutputASCII)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.tbInput)
         Me.Controls.Add(Me.lbInput)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(310, 275)
+        Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(310, 275)
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ASCII Character Generator"
@@ -126,7 +130,7 @@ Partial Class MainForm
     Friend WithEvents tbInput As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents lbOutputASCII As Label
-    Friend WithEvents tbGenerate As Button
-    Friend WithEvents tbReset As Button
-    Friend WithEvents tbExit As Button
+    Friend WithEvents btnGenerate As Button
+    Friend WithEvents btnReset As Button
+    Friend WithEvents btnExit As Button
 End Class
