@@ -15,7 +15,7 @@ Public Class MainForm
         Dim userInput As Integer
 
         If tbInput.Text = "" Then
-            MessageBox.Show("Please input a value", "",
+            MessageBox.Show("Please input a value!", "",
                                 MessageBoxButtons.OK)
             UnitsInputSelect()
         ElseIf Integer.TryParse(tbInput.Text, userInput) Then
@@ -34,7 +34,7 @@ Public Class MainForm
                 UnitsInputSelect()
             End If
         Else
-            MessageBox.Show("Please enter whole numbers only.", "",
+            MessageBox.Show("Please enter Integers only.", "",
                                 MessageBoxButtons.OK)
             UnitsInputSelect()
         End If
