@@ -47,6 +47,7 @@ Partial Class MainForm
         Me.tbInput.Name = "tbInput"
         Me.tbInput.Size = New System.Drawing.Size(100, 20)
         Me.tbInput.TabIndex = 1
+        Me.tbInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
         '
@@ -62,7 +63,7 @@ Partial Class MainForm
         Me.lbOutputASCII.BackColor = System.Drawing.Color.White
         Me.lbOutputASCII.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbOutputASCII.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.lbOutputASCII.Font = New System.Drawing.Font("Times New Roman", 60.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbOutputASCII.Font = New System.Drawing.Font("Courier New", 60.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbOutputASCII.Location = New System.Drawing.Point(13, 111)
         Me.lbOutputASCII.Name = "lbOutputASCII"
         Me.lbOutputASCII.Size = New System.Drawing.Size(100, 97)
